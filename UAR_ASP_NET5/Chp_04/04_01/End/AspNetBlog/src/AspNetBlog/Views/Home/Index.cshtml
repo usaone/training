@@ -1,0 +1,16 @@
+﻿@model AspNetBlog.Models.Post[]
+@{
+    Layout = "_Layout";
+}
+
+@foreach (var post in Model)
+{
+    @Html.Partial("_Post", post)
+}
+
+<nav class="hide">
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</nav>
